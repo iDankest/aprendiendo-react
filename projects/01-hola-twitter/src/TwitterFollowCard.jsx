@@ -1,10 +1,9 @@
 import { useState } from 'react';
 
 export function TwitterFollowCard({
-  userName,
+  userName = 'undefined', // Valor por defecto
   name,
   isFollowing: initialIsFollowing = false,
-  urlImage,
 }) {
   const [isFollowing, setIsFollowing] = useState(initialIsFollowing);
 
@@ -16,7 +15,11 @@ export function TwitterFollowCard({
     <article className="tw-followCard">
       {/* <article style={{ display: 'flex', gap: '1rem' }}>//Foma de estilar el componente pero no la recomendada la forma recomendada es con clases con className    */}
       <header className="tw-followCard-header">
-        <img src={urlImage} alt="Avatar" className="tw-followCard-avatar" />
+        <img
+          src={`https://unavatar.io/${userName}`}
+          alt="Avatar"
+          className="tw-followCard-avatar"
+        />
         <div className="tw-followCard-info">
           <strong>
             <span>{name}</span>{' '}

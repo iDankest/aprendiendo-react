@@ -14,9 +14,7 @@ body {
   align-items: center;
   color: #fff;
   font-size: 0.8em;
-  padding: 3em;
-  background-color: #333;
-  border-radius: 16px;
+  justify-content: space-between;
 }
 .tw-followCard-header {
   display: flex;
@@ -41,4 +39,13 @@ body {
   border-radius: 999px;
   padding: 6px 16px;
   font-weight: bold;
+}
+.tw-followCard-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 18em;
+  background-color: #333;
+  border-radius: 16px;
+  padding: 1.2em;
 }
