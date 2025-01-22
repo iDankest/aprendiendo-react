@@ -13,20 +13,20 @@ export function TwitterFollowCard({
   };
 
   return (
-    <article>
+    <article className="tw-followCard">
       {/* <article style={{ display: 'flex', gap: '1rem' }}>//Foma de estilar el componente pero no la recomendada la forma recomendada es con clases con className    */}
-      <header>
-        <img src={urlImage} alt="Avatar" />
-        <div>
+      <header className="tw-followCard-header">
+        <img src={urlImage} alt="Avatar" className="tw-followCard-avatar" />
+        <div className="tw-followCard-info">
           <strong>
-            <span>{name}</span>
-            <span>@{userName}</span>
+            <span>{name}</span>{' '}
           </strong>
+          <span className="tw-followCard-infoUserName">@{userName}</span>
         </div>
       </header>
       <aside>
-        <button onClick={handleButtonClick}>
-          {isFollowing ? 'Siguiendo' : 'Follow'}
+        <button className="tw-followCard-button" onClick={handleButtonClick}>
+          {isFollowing ? 'Siguiendo' : 'Seguir'}
         </button>
       </aside>
     </article>
